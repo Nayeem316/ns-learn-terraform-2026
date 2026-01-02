@@ -1,6 +1,19 @@
-provider {
-  name = "aws"
-  alias = "us_east_2"
-  region = "us-east-2"
-  profile = "nsyed-terraform"
+#############################
+# AWS Provider
+#############################
+
+provider "aws" {
+  region = var.aws_region
+
+  default_tags {
+    tags = local.common_tags
+  }
+}
+
+#############################
+# Linode Provider
+#############################
+
+provider "linode" {
+  token = var.linode_token
 }
