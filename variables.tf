@@ -19,3 +19,7 @@ variable "additional_tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "vpc_name" {
+  type = string
+}
